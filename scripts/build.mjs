@@ -7,6 +7,7 @@ const output = path.join(root, 'dist');
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 await cp(path.join(root, 'apps/portfolio/public'), output, { recursive: true });
+await cp(path.join(root, 'apps/trancas-store/public'), path.join(output, 'trancas-store'), { recursive: true });
 
 const projects = [
   { slug: 'marketplace', name: 'Marketplace & estoque', number: '01', category: 'COMÉRCIO & GESTÃO', description: 'Uma vitrine para vender. Uma operação para organizar.', scope: 'Espaço reservado para a demonstração de marketplace e controle de estoque.' },
@@ -22,5 +23,5 @@ for (const project of projects) {
 <body><a class="skip" href="#conteudo">Pular para o conteúdo</a><header class="header wrap"><a class="brand" href="/" aria-label="Umbrella, início"><span class="brand-symbol">u.</span>umbrella<span class="muted">/</span></a><nav aria-label="Principal"><a href="/#projetos">Projetos</a><a href="/#sobre">Sobre</a><a class="contact-link" href="/#contato">Vamos conversar <span aria-hidden="true">↗</span></a></nav></header>
 <main id="conteudo" class="wrap project-page"><a class="back" href="/#projetos">← Todos os projetos</a><p class="eyebrow">${project.number} / ${project.category}</p><h1>${project.name}<span class="accent">.</span></h1><p class="project-lead">${project.description}</p><section class="construction"><span class="status"><span></span> Em construção</span><h2>O espaço está pronto.<br>O projeto vem a seguir.</h2><p>${project.scope} As funcionalidades serão desenvolvidas em uma próxima etapa.</p><a class="button" href="/">Explorar o portfólio <span aria-hidden="true">↗</span></a></section></main><footer class="wrap footer"><a class="brand" href="/">umbrella<span class="accent">.</span></a><span>Pedro Mota · Desenvolvimento de software</span><a href="https://github.com/pedroamota" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer></body></html>`);
 }
-await writeFile(path.join(output, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${['', ...projects.map(p => `projetos/${p.slug}/`)].map(route => `<url><loc>https://umbrella.lat/${route}</loc></url>`).join('')}</urlset>`);
+await writeFile(path.join(output, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${['', 'trancas-store/', ...projects.map(p => `projetos/${p.slug}/`)].map(route => `<url><loc>https://umbrella.lat/${route}</loc></url>`).join('')}</urlset>`);
 console.log('Site estático gerado em dist/');

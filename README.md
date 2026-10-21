@@ -36,9 +36,9 @@ O portfólio não precisa de backend nem banco. Quando os apps precisarem de dad
 
 ## Adicionar projetos ao portfólio
 
-Adicione uma entrada `.project-row` em `apps/portfolio/public/index.html`, com nome, descrição e um link real. Tranças Store já aponta para `https://github.com/pedroamota/trancas-store`; esse link abre o código, não uma demonstração.
+Adicione uma entrada `.project-row` em `apps/portfolio/public/index.html`, com nome, descrição e um link real. Tranças Store abre a demonstração em `/trancas-store/`, publicada junto ao portfólio. Seu HTML e CSS ficam em `apps/trancas-store/public`, copiados pelo build. Não é necessário outro projeto Cloudflare para essa página estática.
 
-Cada aplicação pode continuar em seu próprio repositório, com um projeto independente na Cloudflare e seu próprio domínio ou subdomínio. Exemplo de endereço futuro: `trancas.umbrella.lat` (ainda não configurado). Depois de publicar a aplicação, use seu endereço no link do portfólio. Não precisa copiar a aplicação para o Umbrella nem usar iframe. Os projetos reservados em `/projetos/` são páginas de apresentação, não as aplicações completas.
+Aplicações com backend ou necessidades próprias podem continuar em repositórios e deploys independentes, usando subdomínios. Páginas estáticas podem compartilhar este deploy em pastas distintas, como Tranças Store. Os projetos reservados em `/projetos/` são páginas de apresentação, não as aplicações completas.
 
 ## Desempenho e manutenção
 
