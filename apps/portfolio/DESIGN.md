@@ -122,12 +122,12 @@ Botões e formação usam cantos retos. A arte tem arredondamento discreto, stat
 
 ## Components
 
-- **Navegação:** links compactos, contato sublinhado e checkbox nativo de tema com rótulo visível. Claro é o padrão; apenas a escolha escura salva restaura escuro. Não segue automaticamente a preferência do sistema.
+- **Navegação:** links compactos, contato sublinhado e botão circular de tema com ícones SVG: sol no claro e lua no escuro. Claro é o padrão; apenas a escolha escura salva restaura escuro. Não segue automaticamente a preferência do sistema.
 - **Botão principal:** retângulo verde-lima com seta, intervalo interno de 46px e texto (0.84rem, peso 600); hover clareia o fundo.
 - **Projetos:** linhas divisórias, categoria monoespaçada, título, descrição e cápsula de status. Hover colore o título e desloca a seta (3px, −3px) em 0.15s. O projeto futuro sem link permanece um artigo.
 - **Sobre mim/currículo:** perfil lateral com fatos e link de currículo, bloco tonal de formação e trajetória aberta inicialmente. Outros grupos usam `details`/`summary` nativos, com marcador colorido e título aberto em accent.
 - **Contato:** superfície verde-lima com título e links sociais separados por linhas.
-- **Acessibilidade:** link de pular conteúdo; foco de links com contorno de 2px em accent, deslocado 7px; checkbox e sumários possuem foco próprio. `prefers-reduced-motion` desativa transições e força rolagem automática.
+- **Acessibilidade:** link de pular conteúdo; foco de links com contorno de 2px em accent, deslocado 7px; botão de tema e sumários possuem foco próprio. `prefers-reduced-motion` desativa transições e força rolagem automática.
 
 ## Do's and Don'ts
 
