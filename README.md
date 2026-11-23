@@ -42,6 +42,6 @@ Aplicações com backend ou necessidades próprias podem continuar em repositór
 
 ## Desempenho e manutenção
 
-HTML estático, CSS único, fontes do sistema, ilustração SVG e zero JavaScript no navegador. Sem dependências externas ou animações contínuas. Isso reduz transferência e execução; métricas reais ainda devem ser medidas no deploy e em aparelhos móveis. Next.js também pode gerar HTML estático; não é necessário carregar React para este escopo.
+HTML estático, CSS único, fontes do sistema e ilustração SVG. Um pequeno script próprio controla e lembra a escolha de tema em `localStorage`, sem bibliotecas ou chamadas externas. O tema inicial é claro; o usuário pode selecionar o escuro. Se o armazenamento não estiver disponível, o controle continua funcionando na página atual. Sem animações contínuas. Métricas reais ainda devem ser medidas no deploy e em aparelhos móveis.
 
-A política CSP atual bloqueia scripts e formulários por intenção. Ajuste-a de forma explícita quando integrar aplicações, analytics ou serviços. HTML e CSS revalidam o cache para evitar versões antigas de arquivos sem hash.
+A política CSP permite scripts apenas do próprio domínio e bloqueia scripts inline e formulários. Ajuste-a de forma explícita quando integrar aplicações, analytics ou serviços. HTML, CSS e JavaScript revalidam o cache para evitar versões antigas de arquivos sem hash.

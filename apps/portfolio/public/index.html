@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111513">
+  <meta name="theme-color" content="#f6f8f2">
   <meta name="description" content="Pedro Mota — engenheiro de software formado pelo Inatel, com mais de 5 anos de experiência prática. Sistemas industriais, aplicações fullstack e integrações.">
   <meta property="og:title" content="Pedro Mota — Umbrella">
   <meta property="og:description" content="Ideias que ganham forma. Um espaço para explorar meus projetos de software.">
@@ -13,12 +13,13 @@
   <link rel="canonical" href="https://umbrella.lat/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
+  <script src="/theme.js"></script>
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
   <header class="header wrap">
     <a class="brand" href="/" aria-label="Umbrella, início"><span class="brand-symbol">u.</span>umbrella<span class="muted">/</span></a>
-    <nav aria-label="Principal"><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a class="contact-link" href="#contato">Contato <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="Principal"><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a class="contact-link" href="#contato">Contato <span aria-hidden="true">↗</span></a><label class="theme-switch"><input type="checkbox" id="dark-theme"><span>Tema escuro</span></label></nav>
   </header>
   <main id="conteudo">
     <section class="hero wrap" aria-labelledby="hero-title">
@@ -39,19 +40,28 @@
       <article class="project-row"><span class="project-number">05</span><div class="project-info"><span class="tag">PROJETO FUTURO</span><h3>Compras públicas</h3></div><span class="status">Nome a definir</span></article>
     </section>
     <section id="sobre" class="about wrap" aria-labelledby="about-title">
-      <p class="eyebrow">POR TRÁS DO CÓDIGO / 02</p>
-      <div>
-        <h2 id="about-title">Olá, eu sou o Pedro<span class="accent">.</span></h2>
+      <aside class="about-profile">
+        <h2 id="about-title">Sobre mim<span class="accent">.</span></h2>
+        <p class="profile-name">Pedro Mota</p>
+        <p class="profile-role">Engenheiro de Software</p>
+        <p class="profile-description">Software, indústria e operação. Da investigação do problema à manutenção em produção.</p>
+        <ul class="profile-facts"><li>Formado pelo Inatel em 2024</li><li>Mais de 5 anos de experiência prática</li><li>Desenvolvimento fullstack e liderança técnica</li></ul>
+        <a class="profile-link" href="https://www.linkedin.com/in/pedroamota/" target="_blank" rel="noopener noreferrer">Currículo no LinkedIn <span aria-hidden="true">↗</span></a>
+      </aside>
+      <div class="about-content">
+        <h3 class="about-intro">Olá, eu sou o Pedro.</h3>
         <p>Sou engenheiro de software fullstack, formado pelo Instituto Nacional de Telecomunicações — Inatel em 2024, com mais de 5 anos de experiência prática em desenvolvimento de sistemas. Gosto de entender como as coisas funcionam — do código aos processos de uma fábrica, dos servidores aos componentes do meu carro.</p>
         <p>Desenvolvo sistemas que conectam software à operação, com foco em produção, qualidade, estoque e gestão. Minha atuação passa pelo desenvolvimento fullstack, arquitetura, modelagem de dados e manutenção de aplicações em produção.</p>
         <p>Na HT Cabos e Tecnologia, sou responsável técnico por um sistema interno de gestão para manufatura de fibras ópticas e lidero a equipe de desenvolvimento. Atuo desde o levantamento de requisitos e as decisões de arquitetura até a implantação, o monitoramento e a evolução em produção, organizando demandas e prioridades com foco no impacto para a operação.</p>
 
-        <h3 class="about-heading">Formação em engenharia, com base prática</h3>
+        <section class="resume-education" aria-labelledby="education-title">
+        <h3 class="about-heading" id="education-title">Formação em engenharia, com base prática</h3>
         <p><strong>Bacharelado em Engenharia de Software · Inatel · 2020–2024.</strong> Uma formação que combina fundamentos de engenharia, desenvolvimento e experimentação, em uma instituição dedicada à tecnologia e à pesquisa.</p>
         <p>O curso de Engenharia de Software do Inatel recebeu conceito máximo no reconhecimento do MEC, com destaque para a formação prática e a conexão com o mercado. <a class="back" href="https://inatel.br/noticias/engenharia-de-software-engenharia-de-producao-e-engenharia-eletrica-recebem-notas-maximas-em-reconhecimento-do-mec" target="_blank" rel="noopener noreferrer">Conheça o reconhecimento do curso ↗</a></p>
 
-        <details class="about-details">
-          <summary>Minha trajetória profissional</summary>
+        </section>
+        <details class="about-details resume-timeline" open>
+          <summary>Trajetória profissional</summary>
           <dl class="about-list">
             <dt>Software Engineer · HT Cabos e Tecnologia</dt><dd>Jun. 2025–atual · Pouso Alegre, MG. Responsabilidade técnica e liderança de desenvolvimento de sistemas para manufatura, com Python, JavaScript, integrações com ERP, bancos de dados, pipelines CI/CD e sustentação de ambientes produtivos.</dd>
             <dt>Software Engineer · Eurofeedback Brasil</dt><dd>Jan. 2024–mai. 2025 · Santa Rita do Sapucaí, MG. Atuação em engenharia de software após a experiência como desenvolvedor Flutter na empresa.</dd>

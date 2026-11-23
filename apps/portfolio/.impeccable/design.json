@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-23T00:00:00-03:00",
+  "title": "Design System: Umbrella",
+  "extensions": {
+    "colorMeta": {
+      "green": { "role": "primary", "displayName": "Verde-lima original" },
+      "accent": { "role": "primary", "displayName": "Verde de contraste no tema claro" },
+      "bg": { "role": "neutral", "displayName": "Fundo claro esverdeado" },
+      "surface": { "role": "neutral", "displayName": "Superfície de formação" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Título de abertura", "purpose": "Abertura do portfólio." },
+      "label": { "displayName": "Identificador monoespaçado", "purpose": "Identificadores de seção; categorias e números usam variações menores." },
+      "serif": { "displayName": "Destaque em itálico", "purpose": "Palavras de destaque na abertura e no contato; font-style italic no CSS." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "project-arrow", "value": "transform .15s", "purpose": "Seta desloca translate(3px,-3px) no hover da linha." },
+      { "name": "reduced-motion", "value": "transition:none!important;scroll-behavior:auto!important", "purpose": "Aplicado a todos os elementos e pseudoelementos sob prefers-reduced-motion:reduce." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-max", "value": "640px" },
+      { "name": "about-stack-max", "value": "800px" },
+      { "name": "compact-max", "value": "900px" },
+      { "name": "wide-min", "value": "1600px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Explorar projetos",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Link principal retangular da abertura.",
+      "html": "<a class=\"umbrella-button\" href=\"#projetos\">Explorar projetos <span aria-hidden=\"true\">↗</span></a>",
+      "css": ".umbrella-button{display:inline-flex;align-items:center;justify-content:space-between;gap:46px;background:var(--green,#c7ee9b);color:var(--ink,#111513);padding:15px 22px;font-family:Arial,Helvetica,sans-serif;font-size:.84rem;font-weight:600;text-decoration:none}.umbrella-button:hover{background:#dbffb7}.umbrella-button:focus-visible{outline:2px solid var(--accent,#375e2c);outline-offset:7px}"
+    },
+    {
+      "name": "Detalhes do currículo",
+      "kind": "custom",
+      "description": "Disclosure nativo com divisória e marcador de cor.",
+      "html": "<details class=\"umbrella-details\"><summary>Tecnologias &amp; ferramentas</summary><p>Python, FastAPI, Django, Node.js e APIs REST.</p></details>",
+      "css": ".umbrella-details{border-top:1px solid var(--line,#d1d9ca);max-width:610px;font-family:Arial,Helvetica,sans-serif;color:var(--fg,#17251c)}.umbrella-details summary{cursor:pointer;padding-block:18px;font-size:1rem}.umbrella-details summary::marker{color:var(--accent,#375e2c)}.umbrella-details summary:focus-visible{outline:2px solid var(--accent,#375e2c);outline-offset:3px}.umbrella-details[open] summary{color:var(--accent,#375e2c)}.umbrella-details p{font-size:.9rem;color:var(--muted,#526252);line-height:1.6;margin:0 0 18px}@media(max-width:640px){.umbrella-details summary{min-height:56px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Identidade Umbrella original preservada; nenhuma nova metáfora aprovada.",
+    "overview": "Documentação descritiva de public/styles.css e public/index.html. Preservar verde-lima, ilustração de guarda-chuva e linhas de projetos. O escopo aprovado refina Sobre mim/currículo e oferece tema claro padrão com escolha escura lembrada. HTML/CSS estáticos, sem bibliotecas JavaScript de runtime; theme.js usa localStorage.",
+    "keyCharacteristics": ["Verde-lima original", "Títulos amplos com detalhes monoespaçados", "Projetos em linhas", "Superfícies planas", "Currículo legível e responsivo"],
+    "rules": [
+      { "name": "Identidade preservada", "body": "Manter verde, arte original e composição dos projetos; detecções genéricas de estilo não autorizam substituição.", "section": "colors" }
+    ],
+    "dos": ["Do preservar verde, guarda-chuva e linhas de projetos.", "Do manter claro padrão e escolha escura lembrada.", "Do manter navegação nativa por teclado e respeitar movimento reduzido."],
+    "donts": ["Don't iniciar um redesign ou transformar o portfólio em estúdio.", "Don't adicionar bibliotecas de runtime ou substituir projetos por cartões sem aprovação."]
+  }
+}
